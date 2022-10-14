@@ -988,7 +988,7 @@ table {
 /*Body BackGround*/
 
 body {
-  background-image: url('./img/BGblue.png');
+  background-image: url('./BGblue.png');
   background-size: cover;
   background-position: center;
   padding-bottom: 4rem;
