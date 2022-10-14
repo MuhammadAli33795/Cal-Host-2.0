@@ -999,7 +999,7 @@ body {
 /*Body*/
 
 .bodyTheme2 {
-  background-image: url('./img/blackGoldBG.jpg');
+  background-image: url('./img/Bg Black.webp');
 }
 
 /*Menue*/
@@ -1024,20 +1024,17 @@ body {
 
 .calBoxTheme2 {
   border-radius: 0.5rem;
-  border-width: 4px;
+  border-width: 2px;
+  border-top-width: 0px;
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
-
-/*Input
-    .divCsstheme2 {
-        @apply border-orange-500; 
-    }*/
 
 /*Table*/
 
 .tableTheme2 {
-  border-style: none;
+  border-radius: 0px;
+  border-color: transparent;
   background-image: url('./img/tableBlack.jpg');
 }
     

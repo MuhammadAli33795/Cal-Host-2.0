@@ -110,14 +110,10 @@ body {
     }
     /*CalBox*/
     .calBoxTheme2 {
-        @apply border-black border-4 rounded-lg;
+        @apply border-gray-800 border-2 rounded-lg border-t-0;
     }
-    /*Input
-    .divCsstheme2 {
-        @apply border-orange-500; 
-    }*/
     /*Table*/
     .tableTheme2 {
-        @apply bg-tableImageTheme2 border-none;
+        @apply bg-tableImageTheme2 border-transparent rounded-none;
     }
     
