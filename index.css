@@ -980,7 +980,7 @@ td {
 /*Table Background*/
 
 table {
-  background-image: url('/img/PinkBG-1080p.jpg');
+  background-image: url('./img/tableBlack.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -988,7 +988,7 @@ table {
 /*Body BackGround*/
 
 body {
-  background-image: url('/img/BGblue.png');
+  background-image: url('./img/BGblue.png');
   background-size: cover;
   background-position: center;
   padding-bottom: 4rem;
@@ -999,7 +999,7 @@ body {
 /*Body*/
 
 .bodyTheme2 {
-  background-image: url('/img/blackGoldBG.jpg');
+  background-image: url('./img/blackGoldBG.jpg');
 }
 
 /*Menue*/
@@ -1038,6 +1038,6 @@ body {
 
 .tableTheme2 {
   border-style: none;
-  background-image: url('/img/tableBlack.jpg');
+  background-image: url('./img/tableBlack.jpg');
 }
     
