@@ -97,19 +97,15 @@ let displayI = document.getElementById('display');
 let display2 = document.getElementById('display2');
 let button = document.querySelectorAll('button');
 
-//To detect screen change
-//inputSize(); // Changes size of input box Output Screen
-//On clicking input
-//clickInput();
 let expr = '';//String to be solved
 let count = 0;//Flag for Behaviour after equal to has pressed
 let cPress = 1;//Shows C is used or not
 let errorMessage = "'Error' Press C to reset";
 
 //Audio Keys
-let buttonSound = new Audio('/audio/ButtonPopSound.mp3');
-let resultSound = new Audio('/audio/resultSound.mp3');
-let errorSound = new Audio('/audio/errorSound.mp3');
+let buttonSound = new Audio('./audio/ButtonPopSound.mp3');
+let resultSound = new Audio('./audio/resultSound.mp3');
+let errorSound = new Audio('./audio/errorSound.mp3');
 
 /*Feature Disabled
 //to add sound on hover
@@ -220,8 +216,8 @@ menue.addEventListener('click', () => {
 });
 
 //Bg Sound
-let bgSound1 = new Audio('/audio/bgSound1.mp3');
-let bgSound2 = new Audio('/audio/bgSound2.mp3');
+let bgSound1 = new Audio('./audio/bgSound1.mp3');
+let bgSound2 = new Audio('./audio/bgSound2.mp3');
 let mute = 1;
 
 //Mobile Nav Functionality
