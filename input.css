@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Nav Bar Mobile*/
+    /*Menue Button*/
+    .menueCss { @apply text-white  hover:text-pink-300 transition ease-in-out; }
+    .menueCss { @apply text-xl sm:text-2xl lg:text-4xl; }
+    .menueCss { @apply ml-5 mt-5 sm:ml-10 sm:mt-10 lg:ml-16 lg:mt-16 xl:ml-20 xl:mt-20 ; }
+    /*Drop Menue*/
+        .dropMenue {
+            @apply w-full text-center py-2 brightness-125 bg-gradient-to-b  from-pink-500 via-pink-400  to-pink-300 text-slate-300;
+        }
+        .dropMenue {
+            @apply mt-5 sm:mt-6 md:mt-8 lg:mt-10 pb-5 sm:pb-6 lg:pb-10;
+        }
+        
+    /*Heading Css*/
+    .heading2 {
+        @apply text-xl my-2 sm:text-2xl lg:text-4xl lg:my-4;
+    }    
+    /*Nav Buttons*/
+        .navButton {
+            @apply p-1 px-2 drop-shadow-lg shadow-xl  text-orange-500 bg-slate-200 rounded-full hover:bg-orange-500 transition ease-in-out hover:text-slate-300;
+        }
+        .navButton {
+            @apply sm:text-2xl sm:p-2 sm:px-3 lg:text-4xl lg:p-3 lg:px-5;
+        }
+    
+/*Calculator Heading*/
+.calHead {
+    @apply text-4xl text-white my-5;
+}
+    /*At Sm*/
+    .calHead {
+    @apply sm:text-5xl sm:my-8 lg:my-10 lg:text-7xl;
+    }
+/*Input Box*/
+/*Output Box*/
+    .divCss {
+       @apply px-2 lg:px-1 border-2 bg-white border-orange-500 rounded-md text-gray-500;
+    }
+    
+    input {
+        @apply  text-right sm:py-1 lg:py-1 w-60  sm:w-full;
+    }
+    /*Input 1 :- Output box*/
+    .input1 {
+        @apply  text-2xl border-b sm:border-b-2 sm:text-3xl lg:text-4xl;
+    }
+    /*Input 2 :- Output box*/
+    .input2 {
+        @apply  text-xl sm:text-2xl lg:text-3xl;
+    }
+    
+    /*OnClick*/
+    .onClick {
+        @apply active:border-b active:outline-none;
+    }
+/*Table Css*/
+    table {
+       @apply border-2 border-blue-400 rounded-lg text-white;
+    }
+    
+    /*Cell Css*/
+        td {
+            @apply p-2;
+        }
+        /*At sm */
+            td {
+                @apply sm:p-4 sm:py-2;
+            }
+        /*At lg */
+            td {
+                @apply lg:p-5 lg:py-3;
+            }    
+    /*Input buttons*/
+        .InputCss {
+            @apply p-4 py-3 w-12 shadow-xl  rounded-full  bg-orange-500   cursor-pointer hover:bg-orange-300 transition ease-in-out;
+        }
+        /*At sm Input Buttons*/
+            .InputCss {
+                @apply sm:p-5 sm:py-3 sm:w-16  sm:rounded-3xl;
+            }
+        /*At lg Input Buttons*/
+            .InputCss {
+                @apply lg:p-8 lg:py-3 lg:w-20 lg:rounded-lg;
+            }       
+/*Table Background*/
+table {
+    @apply bg-tableImage bg-center bg-cover;
+}
+/*Body BackGround*/
+body {
+    @apply bg-Bgimage bg-cover bg-center pb-16;
+}
+
+/*Theme 2*/
+    /*Body*/
+    .bodyTheme2 {
+        @apply bg-BgimageTheme2;
+    }
+    /*Menue*/
+    .menueCssTheme2 {
+        @apply hover:text-orange-500;
+    }
+    /*Drop Menue*/
+    .dropMenueTheme2 {
+        @apply from-gray-900 via-gray-700  to-gray-500;
+    }
+    /*CalBox*/
+    .calBoxTheme2 {
+        @apply border-black border-4 rounded-lg;
+    }
+    /*Input
+    .divCsstheme2 {
+        @apply border-orange-500; 
+    }*/
+    /*Table*/
+    .tableTheme2 {
+        @apply bg-tableImageTheme2 border-none;
+    }
+    

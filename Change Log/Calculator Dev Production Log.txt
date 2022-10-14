@@ -1,0 +1,16 @@
+1. Pressing Equal After Result Does not do anything.(Previous :- Becomes unsolveable Gave Error)
+   (Feature Change and Error Fix)
+2. Results can be used after Evaluation.(Previous :- Resets Values on any keypress)
+   (Feature Change)
+3. No operator Before '(' Bracket Fixed.(Previous :- Casued Error)
+   (Error Fix)
+4. No operator After ')' Bracket Fixed.(Previous :- Casued Error)
+   (Error Fix)
+
+- Urgent fix code break
+   Code after C is presssed pressing number after . cause replace - Fixed
+- Urgent Fix code break
+   '(' and ')' not working properly as they were before Fixed
+5. Added Missing Bracket Feature auto complete expression.
+
+

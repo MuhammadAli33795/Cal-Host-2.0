@@ -1,0 +1,10 @@
+1-: Feature Change - Menue should appear on top of rest of body. Done
+2-: Feature Change - Show Expression on bottum and Results on top. Done
+3-: Fix - Decimal point not working well with zero. Done
+4-: Fix - Remove Display Sign From second Screen. Done
+5-: Fix - 0/n should be Error or Infinity. Done
+6-: Feature ADD - Restrict unrealatd Keyboard Value to user in input screen. Done
+7-: Feaature Change - Make Answer Screen Un-Editible. Done
+8-: Urgent Fix cutting 1 digit not working. Minor Fix Done
+9-: Upgrade - Add 'Ans' on Display 1 To be more Clear. Done
+

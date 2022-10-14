@@ -1,0 +1,8 @@
+1 :- '-' Before '*', '/','+' should be replaced. Done
+2 :- '-' Negative should stay if previous value is '*', '/'. Done
+3 :- '-' Negative should Replace when '+'. Done
+4 :- Operators Should not replace with '-' if previous value is another operator. Done
+4 :- Operators do not repeat themselves. Done
+5 :- '0' in the beginning Replaces if '-' is pressed. Done
+6 :- Onclick on Input Box Cursor should go to start. Done
+7 :- Disable arrow Keys. Done

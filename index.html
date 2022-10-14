@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Linking Css-->
+    <link rel="stylesheet" href="./index.css">
+
+    <!--Title Name-->
+    <title>Calculator</title>
+
+    <!--For Icon Library-->
+    <script src="https://kit.fontawesome.com/47b1991570.js" crossorigin="anonymous"></script>
+
+    <!--Favicon--><!--
+    <link rel="shortcut icon" type="image/x-icon" href="/img/Favicon.png">-->
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+</head>
+<body class="">
+    <nav class="">
+        <!--For Mobiles-->
+        <!--Menu-->
+        <div class="cursor-pointer menueCss" id="menue">
+            <span><i class="fa-solid fa-bars"></i> Menu</span>
+        </div>
+        <!--Drop Menue-->
+        <div class="absolute dropMenue hidden" id="navHidden">
+            <!--Themes-->
+            <h2 class="heading2">Themes</h2>
+            <button class="navButton" id="theme1"><i class="fa-solid fa-face-smile"></i></button>
+            <button class="navButton" id="theme2"><i class="fa-solid fa-landmark"></i></button>
+            <!--Song Control-->
+            <h2 class="heading2">Song</h2>
+            <button class="navButton" id="songOn"><i class="fa-sharp fa-solid fa-volume-high"></i></button>
+            <button class="navButton" id="songOff"><i class="fa-solid fa-volume-xmark"></i></button>
+            <!--Button Audio Control-->
+            <h2 class="heading2">Button Audio</h2>
+            <button class="navButton" id="audioOn"><i class="fa-sharp fa-solid fa-volume-high"></i></button>
+            <button class="navButton" id="audioOff"><i class="fa-solid fa-volume-xmark"></i></button>
+        </div>
+    </nav>
+    
+    <main class="h-screen">
+        <!--Heading-->
+        <div class="text-center">
+            <h1 class="calHead">Calculator</h1>
+        </div>
+        
+        <!--Flex Center box-->
+        <div class="flex justify-center backGround">
+            <!--Cal BOx-->
+            <div class="" id="callBox">
+                <!--Display-->
+                <div class="divCss" id="output">
+                    <input id="display" class="input1" type="text" value="0"><br>
+                    <input type="text" id="display2" readonly class="input2">
+                </div>
+                <!--Buttons-->
+                <table id="tableId" class="">
+                    <!--Row 1-->
+                    <tr>
+                        <td><button class="InputCss InputCssTheme2">(</button></td>
+                        <td><button class="InputCss">)</button></td>
+                        <td><button class="InputCss">C</button></td>
+                        <td><button class="InputCss">/</button></td>
+                        <!--&#247;-->
+                    </tr>
+                    <!--Row 2-->
+                    <tr>
+                        <td><button class="InputCss">7</button></td>
+                        <td><button class="InputCss">8</button></td>
+                        <td><button class="InputCss">9</button></td>
+                        <td><button class="InputCss">*</button></td>
+                        <!--&#215;-->
+                    </tr>
+                    <!--Row 3-->
+                    <tr>
+                        <td><button class="InputCss">4</button></td>
+                        <td><button class="InputCss">5</button></td>
+                        <td><button class="InputCss">6</button></td>
+                        <td><button class="InputCss">-</button></td>
+                        <!--&#8722;-->
+                    </tr>
+                    <!--Row 4-->
+                    <tr>
+                        <td><button class="InputCss">1</button></td>
+                        <td><button class="InputCss">2</button></td>
+                        <td><button class="InputCss">3</button></td>
+                        <td><button class="InputCss">+</button></td>
+                        <!--&#43;-->
+                    </tr>
+                    <!--Row 5-->
+                    <tr>
+                        <td><button class="InputCss">0</button></td>
+                        <td><button class="InputCss">.</button></td>
+                        <td><button class="InputCss">&lt;-</button></td>
+                        <td><button class="InputCss" id="equalTo">=</button></td>
+                        <!--&#61;-->
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    <!--Script For Nav-->
+    <script src="./index.js"></script><!--Main Calculator Functionality-->
+</body>
+</html>

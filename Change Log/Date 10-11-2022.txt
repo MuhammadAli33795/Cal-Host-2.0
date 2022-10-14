@@ -1,0 +1,5 @@
+1 :- Repeating Operator should overlap previous operator. Done
+2 :- '0' issues when typing with keyboard. Done
+3 :- '0' stays at all times. Done 
+4 :- Check whether '-' is operator or Negative value. Then change operator as it. Left
+5 :- '0' in the beginning Replaces if '-' is pressed.
