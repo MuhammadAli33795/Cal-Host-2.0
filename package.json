@@ -7,7 +7,7 @@
     "build": "npx tailwindcss -i ./input.css -o ./output.css",
     "watch": "npx tailwindcss -i ./input.css -o ./output.css --watch"
   },
-  "author": "",
+  "author": "Muhammad Ali",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.1.8"
