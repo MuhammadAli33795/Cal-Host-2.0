@@ -5,6 +5,10 @@ let displayI = document.getElementById('display');
 let display2 = document.getElementById('display2');
 let button = document.querySelectorAll('button');
 
+//To detect screen change
+//inputSize(); // Changes size of input box Output Screen
+//On clicking input
+//clickInput();
 let expr = '';//String to be solved
 let count = 0;//Flag for Behaviour after equal to has pressed
 let cPress = 1;//Shows C is used or not
@@ -80,7 +84,6 @@ for (let i = 0; i < button.length; i++) {
                 }
                 break;
             case '/': case '*': case '+'://Repeating Operators User Error Handling 
-                console.log('case = "/,+,*"');
                 let  disValue2 = displayI.value[displayI.value.length - 1];
                 if (disValue2 == '+' || disValue2 == '*' || disValue2 == '/') {
                     replaceOperator(show.target.innerHTML);
@@ -108,185 +111,80 @@ for (let i = 0; i < button.length; i++) {
         });
     */
 }
-
-//Keyboard input Controls
-let display1 = document.getElementById('display');
-display1.addEventListener('click', () => {
-    let position = display1.value.length;
-    display1.setSelectionRange(position,position);
-})
-display1.addEventListener('keyup', (e) => {
-    delAns();
-    switch (e.key) {
-        case '-': //Negative Casses
-
-            let disValue1K = displayI.value[displayI.value.length - 2];
-            if (disValue1K == '-' || disValue1K == '+') {
-                replaceOperatorK(e.key);
-                break;
-            }
-            if (display1.value[0] == '0') {
-                display1.value = display1.value.slice(1,display1.value.length);
-            }
-            break;
-        case '+': case '*': case '/':
-
-            let disValue2K = displayI.value[displayI.value.length - 2];
-            if (disValue2K == '+' || disValue2K == '*' || disValue2K == '/') {
-                replaceOperatorK(e.key);
-                break;
-            }
-            if (disValue2K == '-') {
-                let disValue3K = displayI.value[displayI.value.length - 3];
-                if (disValue3K == '*' || disValue3K == '/') {
-                    displayI.value = displayI.value.slice(0,displayI.value.length - 1);
-                    break;
-                }
-                replaceOperatorK(e.key);
-                break;
-            }
-        case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9':
-            if (display1.value[0] == '0') {
-            display1.value = display1.value.slice(1,display1.value.length);
-            break;}
-            break;
-        case '(': case ')': case '.': case 'Shift': case 'e':
-            break;
-        case 'ArrowUp': case 'ArrowDown': case 'ArrowLeft': case 'ArrowRight':
-            let position = display1.value.length;
-            display1.setSelectionRange(position,position);
-            break;    
-        case 'Backspace':
-            displayEmpty();
-            break;
-        case 'Enter':
-            document.getElementById('equalTo').click();
-            break;
-        case 'c': case 'C':
-            displayI.value = "0";
-            display2.value = "";
-            expr = '';
+/*Additional Functions*/
+/*
+   //Push Value to input 2
+   function send() {
+        if (count == 1) {//when you have to use result 
+            display2.value += displayI.value;//Push expression to second display
+            expr += displayI.value;//push expression to expr solving string
+            displayI.value = "";//Empty Display1
             count = 0;
-            cPress = 1;//Shows C is used or not
-            break;
-        default:
-            console.log('Error Key = ' + e.key);
-            display1.value = display1.value.slice(0,-1);
-            displayEmpty();
-            break;
-    }
-});
-//end Keyboard Controls
-
-//Keyboard Control ExtraFunctions
-//Empty the display
- function displayEmpty() {
-    if (display1.value == '' || display1.value == undefined) {
-                display1.value = '0';
-    }
- };
- //Replace Previous Operator
-    function replaceOperatorK(operator) {
-        let value = displayI.value;
-        value = value.slice(0,value.length - 2);
-        value = value + operator;
-        displayI.value = value;
-        console.log('Replace Target = ' + operator);
+        } else {
+            display2.value += displayI.value;//Push expression to second display
+            expr += displayI.value;//push expression to expr solving string
+            displayI.value = "";//Empty Display1
+            count = 0;
+        };
     };
-//Delete Ans if preasent after result
-function delAnsK() {
-    if (count == 1) {
-            displayI.value = displayI.value.slice(6,displayI.value.length);
-            count = 0;
-        }
-};
-//Keyboard Control ExtraFunctions End
-
-//Nav Mobile
-let menue = document.getElementById('menue');
-let navHidden = document.getElementById('navHidden')
-
-//Adding Event listner to know when menue button is pressed
-menue.addEventListener('click', () => {
-    if (navHidden.classList.contains('hidden')) {
-        navHidden.classList.remove('hidden');
-    } else {
-        navHidden.classList.add('hidden');
-    }
-});
-
-//Bg Sound
-let bgSound1 = new Audio('./audio/bgSound1.mp3');
-let bgSound2 = new Audio('./audio/bgSound2.mp3');
-let mute = 1;
-
-//Mobile Nav Functionality
-    //Themes
-        let theme1 = document.getElementById('theme1');
-        let theme2 = document.getElementById('theme2');
-    //Background Music
-        let song1 = document.getElementById('songOn');
-        let song2 = document.getElementById('songOff');
-        //Using Event listner to know when buttons are clicked
-               song1.addEventListener('click', () => {
-                playbg();
-               });
-               song2.addEventListener('click', () => {
-                bgSound1.pause();
-                bgSound2.pause();
-               });
-    //Button Audio
-        let buttonSound1 = document.getElementById('audioOn');
-        let buttonSound2 = document.getElementById('audioOff');
-        //Using Event listner to know when buttons are clicked
-               buttonSound1.addEventListener('click', () => {
-                mute = 1;
-               });
-               buttonSound2.addEventListener('click', () => {
-                mute = 0;
-               });
-        
-    //Bg Audio
-        function playbg() {
-            if (bgSound1.paused == true && bgSound2.paused == true) {
-                bgSound1.play();
-            } else if (bgSound1.paused == true) {
-                bgSound2.play();
-            }    
+*/    
+/*//Old Bracket Fuction Not Usable Broke to much Fuctionality Changed
+    function correction() {//For Fixing user errors before evaluation
+        //For left Bracket
+        if (lbPress == '1') {
+            leftBracket();
+            lbPress = '0';
+        };
+        //For Right Bracket
+        if (rbPress == '1') {
+            rightBracket();
+            console.log('Right Called');
+            rbPress = '0';
+        };
+    };
+        //Bracket Functions
+        function leftBracket() {//Add '*' behind '(' to store in expr for evaluation
+            console.log('leftBracket');
+            let string = expr; console.log('string = ' + string);
+            //let place = string.indexOf('('); console.log('place = ' + place);
+            let prePlace = string[string.length - 1]; console.log('prePlace = ' + prePlace);
+            switch (prePlace) {
+                case '+': case '-': case '*': case '/': case '': case '(': case undefined:
+                    break;
+                default:
+                    expr = expr + '*'; console.log('expr = ' + expr);
+                    break;
+            };
+            lbPress = '0'; console.log('lbPress = ' + lbPress);
         };
 
-//Theme 2
-//Getting all elements to be changed
-let menueTheme2 = document.getElementById('menue');
-let navTheme2 = document.getElementById('navHidden');
-let bodyTheme2 = document.querySelector('body');
-let calTheme2 = document.getElementById('callBox');
-let tableTheme2 = document.getElementById('tableId');
+        function rightBracket() {//Add '*' after '(' to store in expr for evaluation
+            //console.log('rightBracket');
+            let string = displayI.value; console.log('string = ' + string);
+            let place = string.indexOf(')'); console.log('place = ' + place);
+            let prePlace = string[place + 1]; console.log('prePlace = ' + prePlace);
+            switch (prePlace) {
+                case '+': case '-': case '*': case '/': case '': case undefined:
+                    break;
+                default:
+                    let preValue = string.slice(0, place + 1);
+                    preValue = preValue + '*'; console.log( 'preValue = ' + preValue);
+                    let postValue = string.slice(place + 1, string.length); console.log('postValue = ' + postValue);
+                    string = preValue + postValue; console.log('string = ' + string);
+                    break;
+            };
+            console.log('string = ' + string);
+            expr += string;
+            rbPress = 0; console.log('rbPress = ' + rbPress);
+        };
+            function bracketTwiceL() {//Checks if Left Bracket has been Pressed
+                lbPress = '1';
+            };
+            function bracketTwiceR() {//Checks if Right Bracket has been Pressed
+                rbPress = '1';
+            }; 
 
-//Getting Buttons
-let theme1Button = document.getElementById('theme1');
-let theme2Button = document.getElementById('theme2');
-//Changing To theme 1
-theme1Button.addEventListener('click', () => {
-    //console.log('theme1');//Debug purpose
-    menueTheme2.classList.remove('menueCssTheme2');
-    navTheme2.classList.remove('dropMenueTheme2');
-    bodyTheme2.classList.remove('bodyTheme2');
-    calTheme2.classList.remove('calBoxTheme2');
-    tableTheme2.classList.remove('tableTheme2');
-});
-//Changing To theme 2
-theme2Button.addEventListener('click', () => {
-    //console.log('theme2');//Debug purpose
-    menueTheme2.classList.add('menueCssTheme2');
-    navTheme2.classList.add('dropMenueTheme2');
-    bodyTheme2.classList.add('bodyTheme2');
-    calTheme2.classList.add('calBoxTheme2');
-    tableTheme2.classList.add('tableTheme2');
-});
-//Theme 2 End
-
-//Extra Functions Main
+*/
     //Bracket Functions
         function bracketCorrection() {//Corrects The Bracket '(', ')' before evaluation
             let string = expr;
@@ -390,6 +288,20 @@ theme2Button.addEventListener('click', () => {
                 break;
         }
     };
+    /*//Changes Output box size according to port
+    function inputSize() {
+        let tableWidth = document.getElementById('tableId').clientWidth; //Table Width
+        console.log(tableWidth);
+        
+        if (tableWidth == 388) {
+            displayI.size = 21;
+            display2.size = 29;
+        } else if (tableWidth == 484) {
+            displayI.size = 23;
+            display2.size = 29;
+        }
+    };
+    */
     
     //Button sound Exclusion
     function buttonExclusion(flag) {
@@ -426,4 +338,197 @@ theme2Button.addEventListener('click', () => {
                     value = value + operator;
                     displayI.value = value;
     }
-    //Extra functions Main end
+//Keyboard input Controls
+let display1 = document.getElementById('display');
+display1.addEventListener('click', () => {
+    let position = display1.value.length;
+    display1.setSelectionRange(position,position);
+})
+//let valuesN = 1;
+display1.onkeydown = function(e) { //Prevents Values Keyboard Control
+    
+    switch (e.key) {
+        case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': case '+': case '*': case '/': case '-': case '(': case ')': case '.': case 'Shift': case 'ArrowUp': case 'ArrowDown': case 'ArrowLeft': case 'ArrowRight': case 'Backspace': case 'Enter': case 'c': case 'C':
+            break;
+    
+        default:
+            return false;
+            break;
+    }
+};
+//For mobile screens
+display1.ontouchstart = function (e) {
+    display1.readOnly = true;
+}
+display1.addEventListener('keyup', (e) => {
+    delAns();
+    switch (e.key) {
+        case '-': //Negative Casses
+            let disValue1K = displayI.value[displayI.value.length - 2];
+            if (disValue1K == '-' || disValue1K == '+') {
+                replaceOperatorK(e.key);
+                break;
+            }
+            if (display1.value[0] == '0') {
+                display1.value = display1.value.slice(1,display1.value.length);
+                //valuesN -= 1;
+            }
+            //valuesN += 1;
+            break;
+        case '+': case '*': case '/':
+
+            let disValue2K = displayI.value[displayI.value.length - 2];
+            if (disValue2K == '+' || disValue2K == '*' || disValue2K == '/') {
+                replaceOperatorK(e.key);
+                break;
+            }
+            if (disValue2K == '-') {
+                let disValue3K = displayI.value[displayI.value.length - 3];
+                if (disValue3K == '*' || disValue3K == '/') {
+                    displayI.value = displayI.value.slice(0,displayI.value.length - 1);
+                    break;
+                }
+                replaceOperatorK(e.key);
+                break;
+            }
+        case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9':
+            //valuesN += 1;
+            if (display1.value[0] == '0') {display1.value = display1.value.slice(1,display1.value.length);
+            //valuesN -= 1;
+            }
+            break;
+        case '(': case ')': case '.':
+           // valuesN += 1;
+            if (display1.value[0] == '0') {display1.value = display1.value.slice(1,display1.value.length);
+            //valuesN -= 1;
+            }
+            break;
+        case 'Shift':
+            break;    
+        case 'ArrowUp': case 'ArrowDown': case 'ArrowLeft': case 'ArrowRight':
+            let position = display1.value.length;
+            display1.setSelectionRange(position,position);
+            break;    
+        case 'Backspace':
+            displayEmpty();
+            //valuesN -= 1;
+            break;
+        case 'Enter':
+            document.getElementById('equalTo').click();
+            let lengthDis  = displayI.value.slice(6,displayI.value.length);
+            //valuesN =  lengthDis.length;
+            break;
+        case 'c': case 'C':
+            document.getElementById('C').click();
+            //valuesN = 1;
+            break;
+        default:
+        /*
+            let compare = displayI.value.length;
+            if (valuesN != compare) {
+                display1.value = display1.value.slice(0,-1);
+            }
+            valueCheck(); //Exclude Non-Usable keys
+        */
+            break;
+    }
+    /*
+    if (valuesN <= 0) { //Prevent valueN to go in minus
+        valuesN = 1; 
+    }
+    */
+});
+
+ //Replace Previous Operator
+    function replaceOperatorK(operator) {
+        let value = displayI.value;
+        value = value.slice(0,value.length - 2);
+        value = value + operator;
+        displayI.value = value;
+    };
+//Delete Ans if preasent after result
+function delAnsK() {
+    if (count == 1) {
+            displayI.value = displayI.value.slice(6,displayI.value.length);
+            count = 0;
+        }
+};
+//Empty display
+function displayEmpty(){
+    if (displayI.value == '') {
+        displayI.value = '0';
+    }
+}
+/*
+//Exclude Non useable values
+function valueCheck(){
+    let hold = display1.value;
+    let length = hold.length;
+    let Key;
+    for (let i = 0; i < length; i++) {
+            Key = hold[hold.length - 1];
+            switch (Key) {
+                case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': case '+': case '*': case '/': case '-': case '(': case ')': case '.':
+                    i = length;
+                    break;
+                default:
+                    hold = hold.slice(0,-1);
+                    break;
+            }
+    }
+    display1.value = hold;
+}    
+*/
+
+//Nav Mobile
+let menue = document.getElementById('menue');
+let navHidden = document.getElementById('navHidden')
+
+//Adding Event listner to know when menue button is pressed
+menue.addEventListener('click', () => {
+    if (navHidden.classList.contains('hidden')) {
+        navHidden.classList.remove('hidden');
+    } else {
+        navHidden.classList.add('hidden');
+    }
+});
+
+//Bg Sound
+let bgSound1 = new Audio('./audio/bgSound1.mp3');
+let bgSound2 = new Audio('./audio/bgSound2.mp3');
+let mute = 1;
+
+//Mobile Nav Functionality
+    //Themes
+        let theme1 = document.getElementById('theme1');
+        let theme2 = document.getElementById('theme2');
+    //Background Music
+        let song1 = document.getElementById('songOn');
+        let song2 = document.getElementById('songOff');
+        //Using Event listner to know when buttons are clicked
+               song1.addEventListener('click', () => {
+                playbg();
+               });
+               song2.addEventListener('click', () => {
+                bgSound1.pause();
+                bgSound2.pause();
+               });
+    //Button Audio
+        let buttonSound1 = document.getElementById('audioOn');
+        let buttonSound2 = document.getElementById('audioOff');
+        //Using Event listner to know when buttons are clicked
+               buttonSound1.addEventListener('click', () => {
+                mute = 1;
+               });
+               buttonSound2.addEventListener('click', () => {
+                mute = 0;
+               });
+        
+    //Bg Audio
+        function playbg() {
+            if (bgSound1.paused == true && bgSound2.paused == true) {
+                bgSound1.play();
+            } else if (bgSound1.paused == true) {
+                bgSound2.play();
+            }    
+        };

@@ -24,8 +24,8 @@
     <nav class="">
         <!--For Mobiles-->
         <!--Menu-->
-        <div class="cursor-pointer menueCss" id="menue">
-            <span><i class="fa-solid fa-bars"></i> Menu</span>
+        <div class="menueCss">
+            <span class="menuOption" id="menue"><i class="fa-solid fa-bars"></i> Menu</span>
         </div>
         <!--Drop Menue-->
         <div class="absolute dropMenue hidden" id="navHidden">
@@ -39,24 +39,26 @@
             <button class="navButton" id="songOff"><i class="fa-solid fa-volume-xmark"></i></button>
             <!--Button Audio Control-->
             <h2 class="heading2">Button Audio</h2>
+
+
             <button class="navButton" id="audioOn"><i class="fa-sharp fa-solid fa-volume-high"></i></button>
             <button class="navButton" id="audioOff"><i class="fa-solid fa-volume-xmark"></i></button>
         </div>
     </nav>
-    
+
     <main class="h-screen">
         <!--Heading-->
         <div class="text-center">
             <h1 class="calHead">Calculator</h1>
         </div>
-        
+
         <!--Flex Center box-->
         <div class="flex justify-center backGround">
             <!--Cal BOx-->
             <div class="" id="callBox">
                 <!--Display-->
                 <div class="divCss" id="output">
-                    <input id="display" class="input1 " type="text" value="0"><br>
+                    <input id="display" class="input1" type="text" value="0"><br>
                     <input type="text" id="display2" readonly class="input2">
                 </div>
                 <!--Buttons-->
@@ -65,7 +67,7 @@
                     <tr>
                         <td><button class="InputCss InputCssTheme2">(</button></td>
                         <td><button class="InputCss">)</button></td>
-                        <td><button class="InputCss">C</button></td>
+                        <td><button class="InputCss" id="C">C</button></td>
                         <td><button class="InputCss">/</button></td>
                         <!--&#247;-->
                     </tr>
