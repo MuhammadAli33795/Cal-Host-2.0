@@ -161,7 +161,7 @@ body {
 
         }
         input { /*Both Input Display boxes*/
-            @apply w-full sm:py-0 lg:py-1  sm:w-full;
+            @apply w-full sm:py-0 lg:py-1  sm:w-auto;
         }
             .input1 { /*Input 1 :- Output box*/
                 @apply sm:text-2xl lg:text-4xl;
